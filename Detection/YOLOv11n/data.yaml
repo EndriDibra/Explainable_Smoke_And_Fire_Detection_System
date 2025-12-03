@@ -1,0 +1,13 @@
+test: C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor_Fusion/Detection/Detection_Dataset/test/images
+train: C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor_Fusion/Detection/Detection_Dataset/train/images 
+val: C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor_Fusion/Detection/Detection_Dataset/valid/images
+
+nc: 3
+names: ['fire', 'other', 'smoke']
+
+roboflow:
+  workspace: new2firedataset
+  project: newfire2
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/new2firedataset/newfire2/dataset/1

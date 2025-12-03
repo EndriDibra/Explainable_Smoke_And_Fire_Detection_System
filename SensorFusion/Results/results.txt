@@ -1,0 +1,92 @@
+FireAlert Metrics:
+
+Accuracy: 1.0000
+Precision: 1.0000
+Recall: 1.0000
+F1-score: 1.0000
+ROC-AUC: 1.0000
+Matthews Correlation Coefficient: 1.0000
+Cohen's Kappa: 1.0000
+
+Confusion Matrix:
+ [[1114    0]
+ [   0  867]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      1114
+           1       1.00      1.00      1.00       867
+
+    accuracy                           1.00      1981
+   macro avg       1.00      1.00      1.00      1981
+weighted avg       1.00      1.00      1.00      1981
+
+
+SmokeAlert Metrics:
+
+Accuracy: 1.0000
+Precision: 1.0000
+Recall: 1.0000
+F1-score: 1.0000
+ROC-AUC: 1.0000
+Matthews Correlation Coefficient: 1.0000
+Cohen's Kappa: 1.0000
+
+Confusion Matrix:
+ [[1306    0]
+ [   0  675]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      1306
+           1       1.00      1.00      1.00       675
+
+    accuracy                           1.00      1981
+   macro avg       1.00      1.00      1.00      1981
+weighted avg       1.00      1.00      1.00      1981
+
+2025-11-30 19:12:25,070 - INFO - Top features FireAlert: 
+        Feature  Importance
+13        Pfire    0.300612
+15   Pdetection    0.242931
+12     Ptabular    0.148310
+0   Temperature    0.130752
+14       Psmoke    0.038636
+2025-11-30 19:12:25,076 - INFO - Top features SmokeAlert: 
+        Feature  Importance
+14       Psmoke    0.492313
+15   Pdetection    0.119040
+12     Ptabular    0.098521
+0   Temperature    0.088707
+13        Pfire    0.078453
+
+Trained Random Forest models and preprocessors saved: RF_FireAlert_Model.joblib, RF_SmokeAlert_Model.joblib, Imputer.joblib, Scaler.joblib
+2025-11-30 19:12:25,508 - INFO - Models and preprocessors saved successfully.
+
+Computing SHAP for FireAlert Model
+SHAP bar summary plot saved for FireAlert_RF
+Saved SHAP importance to Results/XAI_FireAlert_RF_importance.csv
+
+Top 5 SHAP Features for FireAlert_RF:
+        feature  importance
+13        Pfire    0.213650
+15   Pdetection    0.103241
+12     Ptabular    0.102250
+0   Temperature    0.079140
+9         NC0.5    0.021601
+SHAP computation for FireAlert complete (Time: 4.2s)
+
+Computing SHAP for SmokeAlert Model
+SHAP bar summary plot saved for SmokeAlert_RF
+Saved SHAP importance to Results/XAI_SmokeAlert_RF_importance.csv
+
+Top 5 SHAP Features for SmokeAlert_RF:
+        feature  importance
+14       Psmoke    0.266738
+15   Pdetection    0.066713
+12     Ptabular    0.065948
+0   Temperature    0.050108
+13        Pfire    0.028141
+SHAP computation for SmokeAlert complete (Time: 7.1s)
