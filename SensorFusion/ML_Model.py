@@ -60,14 +60,14 @@ logger = logging.getLogger(__name__)
 # Path to Fusion Dataset
 fusionDatasetPath = "Fusion_Dataset.csv"
 
+# Creating directory for saving results if it does not exist
+os.makedirs("Results", exist_ok=True)
+
 # Creating directory for saving XAI plots if it does not exist
 os.makedirs("Results/XAI_Plots", exist_ok=True)
 
 # Creating directory for saving models if it does not exist
 os.makedirs("Models", exist_ok=True)
-
-# Creating directory for saving results if it does not exist
-os.makedirs("Results", exist_ok=True)
 
 # Checking if dataset file exists
 if not os.path.exists(fusionDatasetPath):
@@ -248,19 +248,19 @@ logger.info(f"Top features FireAlert: \n{importancesFire.head()}")
 logger.info(f"Top features SmokeAlert: \n{importancesSmoke.head()}")
 
 # Saving feature importances to CSV
-importancesFire.to_csv("Results/RF_FireAlert_Importances.csv", index=False)
-importancesSmoke.to_csv("Results/RF_SmokeAlert_Importances.csv", index=False)
+importancesFire.to_csv("Results/FireAlert_Importances.csv", index=False)
+importancesSmoke.to_csv("Results/SmokeAlert_Importances.csv", index=False)
 
 # Saving trained models and preprocessors
 try:
 
-    dump(rfFire, "Models/RF_FireAlert_Model.joblib")
-    dump(rfSmoke, "Models/RF_SmokeAlert_Model.joblib")
+    dump(rfFire, "Models/FireAlert_Model.joblib")
+    dump(rfSmoke, "Models/SmokeAlert_Model.joblib")
 
     dump(imputer, "Models/Imputer.joblib")
     dump(scaler, "Models/Scaler.joblib")
 
-    print("\nTrained Random Forest models and preprocessors saved: RF_FireAlert_Model.joblib, RF_SmokeAlert_Model.joblib, Imputer.joblib, Scaler.joblib")
+    print("\nTrained LightGBM models and preprocessors saved: FireAlert_Model.joblib, SmokeAlert_Model.joblib, Imputer.joblib, Scaler.joblib")
 
     logger.info("Models and preprocessors saved successfully.")
 
@@ -276,7 +276,7 @@ def computeShapValues(modelObj, XTest):
     subset_size = min(1000, len(XTest))
     XTestSubset = XTest.iloc[:subset_size] if hasattr(XTest, 'iloc') else XTest[:subset_size]
     
-    # Using TreeExplainer for RandomForest
+    # Using TreeExplainer for the best model
     explainer = shap.TreeExplainer(modelObj)
     shapValues = explainer.shap_values(XTestSubset)
     
@@ -341,8 +341,8 @@ startTime = time.time()
 try:
 
     shapValuesFire, XExplainSubsetFire = computeShapValues(rfFire, XTest)
-    plotShapBarSummary(shapValuesFire, XExplainSubsetFire, "FireAlert_RF", featureNames)
-    importanceDFFire = saveShapImportanceCSV(shapValuesFire, featureNames, "FireAlert_RF")
+    plotShapBarSummary(shapValuesFire, XExplainSubsetFire, "FireAlert", featureNames)
+    importanceDFFire = saveShapImportanceCSV(shapValuesFire, featureNames, "FireAlert")
 
     print(f"SHAP computation for FireAlert complete (Time: {time.time() - startTime:.1f}s)")
 
@@ -357,8 +357,8 @@ startTime = time.time()
 try:
 
     shapValuesSmoke, XExplainSubsetSmoke = computeShapValues(rfSmoke, XTest)
-    plotShapBarSummary(shapValuesSmoke, XExplainSubsetSmoke, "SmokeAlert_RF", featureNames)
-    importanceDFSmoke = saveShapImportanceCSV(shapValuesSmoke, featureNames, "SmokeAlert_RF")
+    plotShapBarSummary(shapValuesSmoke, XExplainSubsetSmoke, "SmokeAlert", featureNames)
+    importanceDFSmoke = saveShapImportanceCSV(shapValuesSmoke, featureNames, "SmokeAlert")
 
     print(f"SHAP computation for SmokeAlert complete (Time: {time.time() - startTime:.1f}s)")
 
