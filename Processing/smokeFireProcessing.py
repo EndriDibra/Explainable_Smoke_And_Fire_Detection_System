@@ -341,18 +341,32 @@ def evaluateModels(modelDict):
 
     print("Saved model metrics summary CSV.")
 
-    # Returning results sorted by F1 score in descending order
-    return resultsDF.sort_values(by="F1 Score", ascending=False)
+    # Rounding metrics to avoid floating-point tie-breaking
+    resultsDF["F1 Score"] = resultsDF["F1 Score"].round(4)
+
+    # Returning results sorted by F1 score and Training Time
+    # in descending and ascending order accordingly
+    return resultsDF.sort_values(by=["F1 Score", "Training Time"], ascending=[False, True])
+
 
 # Running evaluation for all models
 evaluationResults = evaluateModels(modelDictionary)
 
-print("=== Model Ranking ===")
+print("Model Ranking")
 print(evaluationResults)
 
-# Selecting best model based on F1 score
+# Selecting best model based on F1 score and Training time
 bestModelName = evaluationResults.iloc[0]["Model"]
 bestModel = modelDictionary[bestModelName]
+
+# Prefering LightGBM over single-tree models for its robustness
+if bestModelName in ["DecisionTree", "ExtraTree"]:
+    
+    print(f"Overriding {bestModelName} → LightGBM for deployment robustness")
+    
+    bestModelName = "LightGBM"
+    
+    bestModel = modelDictionary[bestModelName]
 
 print(f"Selected Best Model: {bestModelName}")
 
