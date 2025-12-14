@@ -16,10 +16,10 @@ inputSensorCsv = "C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor
 # Based on the comparison made for each case
 
 # Defining path to YOLO best trained model weights
-yoloModelPath = "C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor_Fusion/Detection/YOLOv5nu/runs/detect/train/weights/best.pt"
+yoloModelPath = "C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor_Fusion/Detection/YOLOv8n/runs/detect/train/weights/best.pt"
 
 # Defining path to best pre-trained Tabular sensor ML model
-sensorModelPath = "C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor_Fusion/Processing/Models/best_AutoML_model_RandomForest.joblib"
+sensorModelPath = "C:/Users/User/Documents/AI_Robotics Projects/Smoke_Fire_Sensor_Fusion/Processing/Models/best_AutoML_model_LightGBM.joblib"
 
 # Setting flag for saving explainable AI outputs
 saveXai = False
