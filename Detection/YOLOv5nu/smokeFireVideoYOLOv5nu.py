@@ -20,7 +20,7 @@ if not camera.isOpened():
     
     exit()
 
-# Initialize previous time for FPS calculation
+# Initializing previous time for FPS calculation
 prevTime = 0
 
 # Looping through camera frames
