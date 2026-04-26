@@ -3,7 +3,7 @@
 
 ---
 
-## 📌 Project Overview
+## Paper and Project Overview
 
 This project presents an **Explainable Artificial Intelligence (XAI) Smoke and Fire Detection System** that combines:
 
@@ -18,7 +18,7 @@ Unlike traditional black-box systems, this framework emphasizes **transparency, 
 
 ---
 
-## 🧠 Key Concept
+## Key Concept
 
 The system integrates two complementary perception streams:
 
@@ -40,15 +40,15 @@ Uses YOLO nano models for real-time smoke/fire detection:
 
 ---
 
-## 🔥 Explainable AI (XAI)
+## Explainable AI (XAI)
 
 To avoid black-box decision-making, the system integrates:
 
-### ✔ SHAP (for tabular ML models)
+### SHAP (for tabular ML models)
 - Explains feature importance
 - Shows how each sensor influences predictions
 
-### ✔ LIME (for YOLO models)
+### LIME (for YOLO models)
 - Explains individual image-level predictions
 - Highlights regions responsible for fire/smoke detection
 
@@ -56,7 +56,7 @@ This enables **human-understandable reasoning behind AI predictions**.
 
 ---
 
-## 🔗 Sensor Fusion Framework (ESF)
+## Sensor Fusion Framework (ESF)
 
 The system implements a **Decision-Level Explainable Sensor Fusion (ESF)** approach:
 
@@ -69,7 +69,7 @@ The system implements a **Decision-Level Explainable Sensor Fusion (ESF)** appro
 
 ---
 
-## 📊 Model Evaluation Criteria
+## Model Evaluation Criteria
 
 Models are evaluated using:
 
@@ -82,7 +82,7 @@ Focus is placed on **edge-device suitability and real-time performance**.
 
 ---
 
-## 🧪 Research Contribution
+## Research Contribution
 
 This system demonstrates:
 
@@ -93,48 +93,56 @@ This system demonstrates:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-### 🔹 Vision-Based Detection (YOLO Models)
+### Vision-Based Detection (YOLO Models)
 
-YOLOv5nu/
-YOLOv8n/
-YOLOv10n/
-YOLOv11n/
-YOLOv12n/
-Detection_Dataset/
-format.py
-yolo_model_performance_plot_values.png
-
----
-
-### 🔹 Tabular ML/DL Sensor Models
-
-Dataset.csv
-smokeFireProcessing.py
-Models/
-Plots/
-XAI_Plots/
-catboost_info/
+- YOLOv5nu/
+- YOLOv8n/
+- YOLOv10n/
+- YOLOv11n/
+- YOLOv12n/
+- Detection_Dataset/
+- format.py
+- yolo_model_performance_plot_values.png
 
 ---
 
-### 🔹 Sensor Fusion System
+### Tabular ML/DL Sensor Models
 
-Fusion_Dataset.csv
-ML_Model.py
-SensorFusion.py
-Models/
-Results/
+- Dataset.csv
+- smokeFireProcessing.py
+- Models/
+- Plots/
+- XAI_Plots/
+- catboost_info/
 
 ---
 
-## 📊 Abstract
+### Sensor Fusion System
+
+- Fusion_Dataset.csv
+- ML_Model.py
+- SensorFusion.py
+- Models/
+- Results/
+
+---
+
+## Abstract
 
 In this study, a decision-level detection framework is presented and evaluated; it integrates sensor data (e.g., temperature, humidity, gas readings) with machine learning (ML) models and computer vision-based smoke and fire detection systems, in an effort to increase overall robustness, as well as false-alarm reduction. To this end, sixteen (16) ML and deep learning (DL) models are employed on an Internet of Things (IoT) sensor dataset. Moreover, a range of YOLO (You Only Look Once) models, such as older versions (YOLOv5n, YOLOv8n), as well as newer versions (YOLOv10n, YOLOv11n, YOLOv12n), are employed on an image-label-based dataset. Model selection initially prioritizes lightweight architectures that are suitable for resource-constrained edge devices. Afterwards, the selected models are evaluated via well-known metrics, such as parameter count, F1-score/mean average precision (mAP) and real-time inference latency. In the same context, explainable AI (XAI) techniques, such as SHAP (SHapley Additive exPlanations) for ML models and LIME (Local Interpretable Model-agnostic Explanations) for the YOLO detectors, are integrated into the platform as well. According to the presented results, the Explainable Sensor Fusion (ESF) framework demonstrates a high level of internal consistency and logical reliability through its decision-level fusion paradigm in a controlled environment.
 
 ---
 
-## 🎯 Keywords
+## Keywords
 
-YOLO · Sensor Fusion · Machine Learning · Deep Learning · Explainable AI (XAI) · Edge Devices · Fire Detection · Smoke Detection · IoT Systems
+- YOLO
+- Sensor Fusion
+- Machine Learning
+- Deep Learning
+- Explainable AI (XAI)
+- Edge Devices
+- Fire Detection
+- Smoke Detection
+- IoT Systems
