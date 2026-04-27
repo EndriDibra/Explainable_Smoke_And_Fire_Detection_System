@@ -96,7 +96,7 @@ This system demonstrates:
 ## Project Structure
 
 ### Vision-Based Detection (YOLO Models)
-
+- ### Detection/
 - YOLOv5nu/
 - YOLOv8n/
 - YOLOv10n/
@@ -110,6 +110,7 @@ This system demonstrates:
 
 ### Tabular ML/DL Sensor Models
 
+- ### Processing/
 - Dataset.csv
 - smokeFireProcessing.py
 - Models/
@@ -121,6 +122,7 @@ This system demonstrates:
 
 ### Sensor Fusion System
 
+- ### SensorFusion/
 - Fusion_Dataset.csv
 - ML_Model.py
 - SensorFusion.py
