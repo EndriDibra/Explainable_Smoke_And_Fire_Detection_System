@@ -20,7 +20,7 @@ Unlike traditional black-box systems, this framework emphasizes **transparency, 
   <img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Detection/YOLOv8n/combined_limeImages.png" width="350" title="ISR Robot">
 </p>
 
-[The link for the paper is this:](https://www.mdpi.com/2079-9292/15/4/747)
+[Click to see the paper](https://www.mdpi.com/2079-9292/15/4/747)
 
 ---
 
