@@ -16,7 +16,7 @@ The main goal is to build a **robust, lightweight, and interpretable fire/smoke 
 
 Unlike traditional black-box systems, this framework emphasizes **transparency, trust, and interpretability** in AI decision-making.
 
-**At the image below we can see the parts of the smokes and fires that contributed the most to AI's final classification desicions.**
+**At the images below we can see the parts of the smokes and fires that contributed the most to AI's final classification desicions, various case of noises at the images with their affection on performance of the Vision models and lastly, the performance of YOLOv8n Vision model for smoke and fire detections.**
 
 <p align="center">
   <table>
