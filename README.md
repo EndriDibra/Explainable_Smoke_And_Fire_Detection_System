@@ -19,7 +19,13 @@ Unlike traditional black-box systems, this framework emphasizes **transparency, 
 **At the image below we can see the parts of the smokes and fires that contributed the most to AI's final classification desicions.**
 
 <p align="center">
-  <img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Detection/YOLOv8n/combined_limeImages.png" title="ISR Robot">
+  <table>
+    <tr>
+      <td><img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Detection/YOLOv8n/combined_limeImages.png" width="300"></td>
+      <td><img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Images/Fire_1.png" width="300"></td>
+      <td><img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Images/Fire_2.jpg" width="300"></td>
+    </tr>
+  </table>
 </p>
 
 [Click to see the paper](https://www.mdpi.com/2079-9292/15/4/747)
