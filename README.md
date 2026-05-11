@@ -24,6 +24,13 @@ Unlike traditional black-box systems, this framework emphasizes **transparency, 
 
 ---
 
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/40ba0bec-18b5-4b72-9e1c-d1eb30cf09cb" controls>
+  </video> 
+</div>
+
+---
+
 ## Key Concept
 
 The system integrates two complementary perception streams:
