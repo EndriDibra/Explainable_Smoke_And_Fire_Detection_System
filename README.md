@@ -22,8 +22,8 @@ Unlike traditional black-box systems, this framework emphasizes **transparency, 
   <table>
     <tr>
       <td><img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Detection/YOLOv8n/combined_limeImages.png" width="300"></td>
-      <td><img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Images/Fire_1.png" width="300"></td>
       <td><img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Images/Fire_2.jpg" width="300"></td>
+      <td><img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Images/Fire_1.png" width="300"></td>
     </tr>
   </table>
 </p>
