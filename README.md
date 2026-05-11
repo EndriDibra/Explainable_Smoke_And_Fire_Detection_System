@@ -16,7 +16,7 @@ The main goal is to build a **robust, lightweight, and interpretable fire/smoke 
 
 Unlike traditional black-box systems, this framework emphasizes **transparency, trust, and interpretability** in AI decision-making.
 
-At the image below we can see the parts of the smokes and fires that contributed the most to AI's final classification desicions.
+**At the image below we can see the parts of the smokes and fires that contributed the most to AI's final classification desicions.**
 
 <p align="center">
   <img src="https://github.com/EndriDibra/Explainable_Smoke_And_Fire_Detection_System/blob/main/Detection/YOLOv8n/combined_limeImages.png" title="ISR Robot">
